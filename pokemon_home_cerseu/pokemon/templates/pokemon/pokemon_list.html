@@ -1,0 +1,29 @@
+{% extends "../catalog/base_generic.html" %}
+
+{% block content %}
+
+    <div>
+        <p>App Pokemon funcionando correctamente!!!</p>
+    </div>
+<!--    <div>-->
+<!--        <p>Nombre de owner: <strong>{{ data.nombre_owner }}</strong></p>-->
+<!--        <p>Edad del owner: <strong>{{ data.edad }}</strong></p>-->
+<!--        <p>País del owner: <strong>{{ data.pais }}</strong></p>-->
+<!--        {% if data.edad >= 18 %}-->
+<!--            <p>{{ data.nombre_owner }} es MAYOR de edad</p>-->
+<!--        {% else %}-->
+<!--            <p>{{ data.nombre_owner }} es MENOR de edad</p>-->
+<!--        {% endif %}-->
+<!--    </div>-->
+
+    <div>
+        {% for pokemon in data %}
+            <p>Nombre de pokemon: <strong>{{ pokemon.nombre }}</strong></p>
+            <p>Tipo de pokemon: <strong>{{ pokemon.tipo }}</strong></p>
+            <p>Generacion: <strong>{{ pokemon.generacion }}</strong></p>
+        <br>
+        <br>
+        {% endfor %}
+    </div>
+
+{% endblock %}
