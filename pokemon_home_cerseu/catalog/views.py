@@ -11,4 +11,4 @@ def list_catalog(request):
             'pais': 'Perú'
         }
     catalogs = Catalog.objects.all()
-    return render(request, 'catalog/catalog_list.html', context={'data': catalogs})
+    return render(request, 'catalog/catalog.html', context={'data': catalogs})
