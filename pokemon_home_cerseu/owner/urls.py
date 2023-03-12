@@ -12,4 +12,7 @@ urlpatterns = [
     path("owner_create/", views.OwnerCreate.as_view(), name="owner_create"),
     path("owner_update/<int:pk>", views.OwnerUpdate.as_view(), name="owner_update"),
     path("owner_delete_confirm/<int:pk>", views.OwnerDelete.as_view(), name="owner_delete_confirm"),
+
+    path('owner_list_drf_def/', views.owner_api_view, name='owner_list_drf_def'),
+    path('owner_detail_drf_def/<int:pk>', views.owner_detail_view, name='owner_detail_drf_def'),
 ]
